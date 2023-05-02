@@ -20,6 +20,7 @@
 [Trouble Shooting](#-trouble-shooting)
 
 ## 🔑 Keyword
+### 60초 타이머
 
 ## 📚 Study
 
