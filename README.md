@@ -21,6 +21,9 @@
 
 ## 🔑 Keyword
 ### 60초 타이머
+1. selector사용법
+2. UIView 선그리기
+3. 사운드 플레이 
 
 ## 📚 Study
 
