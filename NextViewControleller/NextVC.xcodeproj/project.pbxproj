@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 53;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -16,6 +16,7 @@
 		47EDC7F727738965002C95CA /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47EDC7F627738965002C95CA /* SecondViewController.swift */; };
 		47EDC7FB2773A580002C95CA /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47EDC7FA2773A580002C95CA /* ThirdViewController.swift */; };
 		47EDC7FD277430E3002C95CA /* FourthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47EDC7FC277430E3002C95CA /* FourthViewController.swift */; };
+		63DE466C2A0373860096A863 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DE466B2A0373860096A863 /* FirstViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		47EDC7F627738965002C95CA /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		47EDC7FA2773A580002C95CA /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
 		47EDC7FC277430E3002C95CA /* FourthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourthViewController.swift; sourceTree = "<group>"; };
+		63DE466B2A0373860096A863 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +67,7 @@
 				47EDC7E22773817E002C95CA /* AppDelegate.swift */,
 				47EDC7E42773817E002C95CA /* SceneDelegate.swift */,
 				47EDC7E62773817E002C95CA /* ViewController.swift */,
+				63DE466B2A0373860096A863 /* FirstViewController.swift */,
 				47EDC7F627738965002C95CA /* SecondViewController.swift */,
 				47EDC7FA2773A580002C95CA /* ThirdViewController.swift */,
 				47EDC7FC277430E3002C95CA /* FourthViewController.swift */,
@@ -102,8 +105,9 @@
 		47EDC7D72773817E002C95CA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				BuildIndependentTargetsInParallel = YES;
 				LastSwiftUpdateCheck = 1250;
-				LastUpgradeCheck = 1250;
+				LastUpgradeCheck = 1430;
 				TargetAttributes = {
 					47EDC7DE2773817E002C95CA = {
 						CreatedOnToolsVersion = 12.5.1;
@@ -152,6 +156,7 @@
 				47EDC7E32773817E002C95CA /* AppDelegate.swift in Sources */,
 				47EDC7FB2773A580002C95CA /* ThirdViewController.swift in Sources */,
 				47EDC7E52773817E002C95CA /* SceneDelegate.swift in Sources */,
+				63DE466C2A0373860096A863 /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
