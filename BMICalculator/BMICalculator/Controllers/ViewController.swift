@@ -27,8 +27,8 @@ class ViewController: UIViewController {
         makeUI()
     }
     
+    //UI셋팅 (스토리보드 이외)
     func makeUI() {
-  
         mainLabel.text = "키와 몸무게를 입력해주세요"
         calculatorBtn.clipsToBounds = true
         calculatorBtn.layer.cornerRadius = 5
@@ -36,6 +36,7 @@ class ViewController: UIViewController {
         heightTextField.placeholder = "cm 단위로 입력해주세요"
         weightTextField.placeholder = "kg 단위로 입력해주세요"
         
+        // 텍스트필드 키보드 설정
         heightTextField.keyboardType = UIKeyboardType.numbersAndPunctuation
         weightTextField.keyboardType = UIKeyboardType.numbersAndPunctuation
         heightTextField.returnKeyType = .done
@@ -45,9 +46,9 @@ class ViewController: UIViewController {
 
     
     @IBAction func calculatorBtnTapped(_ sender: UIButton) {
-        // 버튼을 눌렀을때 입력받은 값을 bmiManager한테 전달만 하면 됨
-        bmiManager.calculateBMI(height: heightTextField.text!, weight: weightTextField.text!)
-            }
+        print(#function)
+        
+    }
     
     // 직접세그웨이 구현시 자동으로 불려오는 매커니즘 ⭐️
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
@@ -67,11 +68,13 @@ class ViewController: UIViewController {
         if segue.identifier == "toSecondVC" {
             // SecondViewController 타입캐스팅... 접근할 수 있도록
             let secondVC = segue.destination as! SecondViewController
+            secondVC.modalPresentationStyle = .fullScreen
             
-            // 계산된 결과값을 다음화면으로 전달
-            secondVC.bmiNumber = bmiManager.getBMIResult()
-            secondVC.bmiColor = bmiManager.getBackgroundColor()
-            secondVC.adviceString = bmiManager.getBMIAdviceString()
+            // 로직 담당 인스턴스에서 BMI를 얻어서
+            let bmi = bmiManager.getBMI(height: heightTextField.text!, weight: weightTextField.text!)
+            
+            // (다음화면으로 데이터 전달 )
+            secondVC.bmi = bmi
         }
         
         // 다음화면으로 넘어가기 전에 텍스트필드 비우기

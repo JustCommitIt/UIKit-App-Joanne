@@ -14,19 +14,16 @@ class SecondViewController: UIViewController {
     @IBOutlet weak var adviceLabel: UILabel!
     @IBOutlet weak var backBtn: UIButton!
     
-    // 이 변수를 통해 데이터를 받는다
-    var bmiNumber: Double?
-    var adviceString: String?
-    var bmiColor: UIColor?
-    
+    // 이 변수를 통해 전화면에서 데이터를 받는다.
+    var bmi: BMI?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         makeUI()
-
     }
     func makeUI(){
-        
+        // UI셋팅
         bmiNumberLabel.clipsToBounds = true
         bmiNumberLabel.layer.cornerRadius = 8
         bmiNumberLabel.backgroundColor = .gray
@@ -34,17 +31,17 @@ class SecondViewController: UIViewController {
         backBtn.clipsToBounds = true
         backBtn.layer.cornerRadius = 5
         backBtn.setTitle("다시 계산하기", for: .normal)
-
-        guard let bmiNumber = bmiNumber else { return }
-        bmiNumberLabel.text = String(bmiNumber)
         
-        adviceLabel.text = adviceString
-        bmiNumberLabel.backgroundColor = bmiColor
+        // 전화면에서 전달받은 BMI를 통해 셋팅
+        bmiNumberLabel.text = "\(bmi?.value)"
+        bmiNumberLabel.backgroundColor = bmi?.matchColor
+        adviceLabel.text = bmi?.advice
         
     }
     
 
     @IBAction func backBtnTapped(_ sender: UIButton) {
+        // 전화면으로 돌아가는 메서드
         self.dismiss(animated: true, completion: nil)
         
     }
